@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carita CSS</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg,#f0f8ff 0%, #e6f7ff 100%);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      padding:24px;
+    }
+
+    /* contenedor de la cara */
+    .face{
+      width:320px;
+      height:320px;
+      background:#FFD76B;
+      border-radius:50%;
+      position:relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12), inset 0 -18px 24px rgba(0,0,0,0.06);
+      display:block;
+    }
+
+    /* ojos */
+    .eye{
+      width:56px;
+      height:56px;
+      background:#ffffff;
+      border-radius:50%;
+      position:absolute;
+      top:28%;
+      left:24%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.06);
+    }
+    .eye.right{ left:auto; right:24%; }
+
+    .pupil{
+      width:20px;
+      height:20px;
+      background:#222222;
+      border-radius:50%;
+      transform: translateY(2px);
+    }
+
+    /* cejas */
+    .eyebrow{
+      width:70px;
+      height:12px;
+      border-radius:12px;
+      background: rgba(0,0,0,0.12);
+      position:absolute;
+      top:18%;
+      left:20%;
+      transform: rotate(-8deg);
+    }
+    .eyebrow.right{ left:auto; right:20%; transform: rotate(8deg); }
+
+    /* nariz (triángulo CSS) */
+    .nose{
+      width:0;
+      height:0;
+      border-left:12px solid transparent;
+      border-right:12px solid transparent;
+      border-top:18px solid #ffb04d;
+      position:absolute;
+      left:50%;
+      top:44%;
+      transform: translateX(-50%);
+    }
+
+    /* mejillas */
+    .blush{
+      width:48px;
+      height:28px;
+      background: linear-gradient(90deg,#ffb7c7,#ffc3b7);
+      border-radius:50%;
+      position:absolute;
+      top:52%;
+      left:14%;
+      transform: translateY(-10%);
+      opacity:0.95;
+      filter: blur(0.2px);
+    }
+    .blush.right{ left:auto; right:14%; }
+
+    /* boca (semicírculo con lengua) */
+    .mouth{
+      width:60%;
+      height:40%;
+      position:absolute;
+      left:50%;
+      bottom:18%;
+      transform: translateX(-50%);
+      overflow:hidden;
+    }
+    .smile{
+      width:100%;
+      height:220%;
+      border-bottom-left-radius:300px;
+      border-bottom-right-radius:300px;
+      background:#c83a3a;
+      position:absolute;
+      bottom:-58%;
+      left:0;
+    }
+    .tongue{
+      width:46%;
+      height:50%;
+      background:#ff7ab6;
+      border-radius:50%;
+      position:absolute;
+      left:50%;
+      bottom:6%;
+      transform: translateX(-50%);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.08) inset;
+    }
+
+    /* accesibilidad */
+    .face[role="img"]{ outline: none; }
+
+    /* responsive */
+    @media (max-width:420px){
+      .face{ width:220px; height:220px }
+      .eye{ width:38px; height:38px }
+      .pupil{ width:14px; height:14px }
+      .eyebrow{ width:48px; height:10px }
+    }
+  </style>
+</head>
+<body>
+  <div class="face" role="img" aria-label="Carita sonriente">
+    <div class="eyebrow"></div>
+    <div class="eyebrow right"></div>
+
+    <div class="eye left-eye">
+      <div class="pupil"></div>
+    </div>
+
+    <div class="eye right">
+      <div class="pupil"></div>
+    </div>
+
+    <div class="nose"></div>
+
+    <div class="blush"></div>
+    <div class="blush right"></div>
+
+    <div class="mouth" aria-hidden="true">
+      <div class="smile"></div>
+      <div class="tongue"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            border: 1px solid black;
+            height: 100vh;
+            width: 90%;
+            background-color: blue;
+        }
+        .box .header{
+            display: flex;
+            border:1px solid yellow;
+            /* align-items: stretch; */
+            flex-direction: row;
+        }
+        .box .header .logo{
+            display: flex;
+            background-color: red;
+            width: 100px;
+            height: 40px;
+        }
+        .box .header .topbar{
+            display: flex;
+            background-color: green;
+            width: 100%;
+            height: 40px;
+            flex-direction: column;
+        }
+        .box .header .topbar .banner{
+            background-color: orange;
+            width: 100%;
+            height: 20px;
+        }
+        .box .header .topbar .banner .menu{
+            background-color: purple;
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+    <div class="header">
+        <div class="logo">
+            <div class="topbar">
+                <div class="banner">
+                    <div class="menu">
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="option">
+                        <div class="content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+</body>
+</html>

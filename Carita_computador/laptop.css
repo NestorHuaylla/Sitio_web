@@ -1,0 +1,97 @@
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monitor {
+  width: 300px;
+  height: 180px;
+  background: #222;
+  border-radius: 10px 10px 3px 3px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  margin-bottom: 18px;
+}
+
+.screen {
+  width: 260px;
+  height: 140px;
+  background: #0cf;
+  margin: 20px auto 0;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #0cf inset;
+}
+
+.base {
+  width: 80px;
+  height: 16px;
+  background: #444;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+}
+
+.cpu {
+  width: 70px;
+  height: 100px;
+  background: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin: 28px 0 10px 0;
+  position: relative;
+}
+
+.cpu::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #0cf;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.keyboard {
+  width: 150px;
+  height: 28px;
+  background: #ddd;
+  border-radius: 6px;
+  margin: 10px 0 0 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.keyboard::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 6px;
+  background: #bbb;
+  border-radius: 3px;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
+.mouse {
+  width: 28px;
+  height: 16px;
+  background: #ccc;
+  border-radius: 14px 14px 14px 14px / 9px 9px 9px 9px;
+  margin: 8px 0 0 120px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.14);
+}

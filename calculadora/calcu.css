@@ -26,7 +26,7 @@ body {
 
 .pantalla {
     grid-column: 1 / -1;
-    background-color: #090c31;
+    background-color: #8cd615;
     padding: 1.5rem;
     font-size: 2rem;
     text-align: right;
@@ -37,7 +37,7 @@ body {
 }
 
 .btn {
-    background-color: #15173c;;
+    background-color: #0f19d8;;
     color: white;
     border: 0;
     padding: 1.5rem .5rem;
@@ -49,7 +49,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #090c31;
+    background-color: #0c1ada;
 }
 
 #cero {
@@ -58,9 +58,9 @@ body {
 
 #igual {
     grid-row: span 2;
-    background-color: #e6394a;
+    background-color: #39e687;
 }
 
 #igual:hover {
-    background-color: #e65766;
+    background-color: #bd16cc;
 }
